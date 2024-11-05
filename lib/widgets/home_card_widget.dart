@@ -12,7 +12,8 @@ class HomeCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(AppBorderRadius.radius15)),
       child: SizedBox(
         height: AppSize.appSize200,
         width: double.infinity,

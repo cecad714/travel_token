@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:traveltoken/pages/add_people_page.dart';
 import 'package:traveltoken/pages/home_page.dart';
 import 'package:traveltoken/pages/sign_in_page.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const AddPeoplePage(),
     );
   }
 }
