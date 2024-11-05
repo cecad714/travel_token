@@ -4,6 +4,7 @@ class AppSize {
   static const double signInButtonHeight = 59;
   static const double appSize59 = 59;
   static const double appSize100 = 100;
+  static const double appSize200 = 200;
   static const double appSize28 = 28;
   static const double appSize24 = 24;
   static const double appSize16 = 16;
@@ -11,10 +12,16 @@ class AppSize {
 }
 
 class AppPadding {
+  static const double padding8 = 8;
+  static const double padding10 = 10;
   static const double padding14 = 14;
   static const double padding22 = 22;
 }
 
 class AppFontSize {
+  static const double font10 = 10;
+  static const double font14 = 14;
   static const double font16 = 16;
+  static const double font18 = 18;
+  static const double font32 = 32;
 }

@@ -38,7 +38,7 @@ class SignInPage extends StatelessWidget {
                     height: AppSize.logoImageHeight,
                     width: AppSize.logoImageWidth,
                     AppImages.signLogo,
-                    fit: BoxFit.fill,
+                    fit: BoxFit.cover,
                   ),
                 ),
                 const Text(
