@@ -49,6 +49,23 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          selectedFontSize: 0,
+          unselectedFontSize: 0,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.add_circle,
+                  color: Colors.black,
+                  size: 35,
+                ),
+                label: ""),
+            BottomNavigationBarItem(icon: Icon(Icons.menu), label: ""),
+          ]),
     );
   }
 }

@@ -4,8 +4,8 @@ import 'package:traveltoken/constant/app_fonts.dart';
 import 'package:traveltoken/constant/app_size.dart';
 import 'package:traveltoken/constant/app_string.dart';
 
-class AddPeoplePage extends StatelessWidget {
-  const AddPeoplePage({super.key});
+class AddExpensePage extends StatelessWidget {
+  const AddExpensePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class AddPeoplePage extends StatelessWidget {
               //add people
 
               const Text(
-                AppString.addPeople,
+                AppString.addExpense,
                 style: TextStyle(
                   fontFamily: AppFonts.raleWay,
                   fontSize: AppSize.appSize28,
@@ -28,7 +28,7 @@ class AddPeoplePage extends StatelessWidget {
               ),
               //choose people
               const Text(
-                AppString.choosePeople,
+                AppString.addExpenseGroup,
                 style: TextStyle(
                   fontFamily: AppFonts.raleWay,
                   fontSize: AppFontSize.font16,
@@ -39,9 +39,9 @@ class AddPeoplePage extends StatelessWidget {
               const SizedBox(
                 height: AppSize.appSize40,
               ),
-              //Group title
+              //Description
               const Text(
-                AppString.groupTitle,
+                AppString.description,
                 style: TextStyle(
                   fontFamily: AppFonts.raleWay,
                   fontSize: AppFontSize.font14,
@@ -57,7 +57,7 @@ class AddPeoplePage extends StatelessWidget {
                 child: const TextField(
                   decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "Required",
+                      hintText: AppString.required,
                       contentPadding: EdgeInsets.only(left: 10),
                       hintStyle: TextStyle(
                         color: AppColor.hintColor,
@@ -69,9 +69,9 @@ class AddPeoplePage extends StatelessWidget {
               const SizedBox(
                 height: AppSize.appSize13,
               ),
-              //Choose Date
+              //Amount
               const Text(
-                AppString.chooseDate,
+                AppString.amount,
                 style: TextStyle(
                   fontFamily: AppFonts.raleWay,
                   fontSize: AppFontSize.font14,
@@ -87,7 +87,7 @@ class AddPeoplePage extends StatelessWidget {
                 child: const TextField(
                   decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "Date Picker",
+                      hintText: AppString.required,
                       contentPadding: EdgeInsets.only(left: 10),
                       hintStyle: TextStyle(
                         color: AppColor.hintColor,
@@ -98,50 +98,8 @@ class AddPeoplePage extends StatelessWidget {
               const SizedBox(
                 height: AppSize.appSize13,
               ),
-              //email id
-              const Text(
-                AppString.emailId,
-                style: TextStyle(
-                  fontFamily: AppFonts.raleWay,
-                  fontSize: AppFontSize.font14,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
 
-              Container(
-                height: AppSize.appSize37,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    color: AppColor.formFieldFill),
-                child: const TextField(
-                  decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Required",
-                      contentPadding: EdgeInsets.only(left: 10),
-                      hintStyle: TextStyle(
-                        color: AppColor.hintColor,
-                        fontSize: AppFontSize.font16,
-                      )),
-                ),
-              ),
-              //added email
-
-              Expanded(
-                  child: ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: const Text("user@gmail.com"),
-                    trailing: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.close,
-                          color: Colors.red,
-                          size: 25,
-                        )),
-                  );
-                },
-              )),
+              const Spacer(),
 
               Container(
                 padding: const EdgeInsets.symmetric(
@@ -153,7 +111,7 @@ class AddPeoplePage extends StatelessWidget {
                     borderRadius: BorderRadius.all(
                         Radius.circular(AppSize.buttonBorderRadius))),
                 child: const Text(
-                  AppString.createGroup,
+                  AppString.addExpense,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: AppColor.buttonTextColor,
