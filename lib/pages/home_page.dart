@@ -1,70 +1,58 @@
 import 'package:flutter/material.dart';
-import 'package:traveltoken/constant/app_fonts.dart';
-import 'package:traveltoken/constant/app_size.dart';
-import 'package:traveltoken/constant/app_string.dart';
-import 'package:traveltoken/widgets/home_card_widget.dart';
+import 'package:traveltoken/pages/create_group_page.dart';
+import 'package:traveltoken/pages/summary_list_page.dart';
+import 'package:traveltoken/widgets/home_widget.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(AppPadding.padding10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              //name
-
-              const Text(
-                "${AppString.hi}Arjun",
-                style: TextStyle(
-                  fontFamily: AppFonts.montserratFont,
-                  fontSize: AppFontSize.font32,
-                ),
-              ),
-
-              const SizedBox(height: AppSize.appSize16),
-              //expense
-              const Text(
-                AppString.expenses,
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    fontFamily: AppFonts.montserratFont,
-                    fontSize: AppFontSize.font18,
-                    fontWeight: FontWeight.w600),
-              ),
-              //listview builder
-
-              Expanded(
-                  child: ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return const HomeCardWidget();
-                },
-              ))
-            ],
-          ),
-        ),
+        child: index == 2 ? const SummaryListPage() : const ExpenseListWidget(),
       ),
       bottomNavigationBar: BottomNavigationBar(
           selectedFontSize: 0,
           unselectedFontSize: 0,
+          selectedItemColor: Colors.blue,
+          // unselectedItemColor: Colors.grey, // Set unselected item color
+          currentIndex: index, // Set the current index
+          onTap: (value) {
+            if (value == 1) {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const CreateGroupPage(),
+              ));
+            } else {
+              setState(() {
+                index = value;
+              });
+            }
+          },
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: "",
             ),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.add_circle,
-                  color: Colors.black,
-                  size: 35,
-                ),
-                label: ""),
-            BottomNavigationBarItem(icon: Icon(Icons.menu), label: ""),
+              icon: Icon(
+                Icons.add_circle,
+                size: 35,
+                color: Colors.black,
+              ),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.menu),
+              label: "",
+            ),
           ]),
     );
   }

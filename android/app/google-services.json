@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "535215021903",
+    "project_id": "travel-token-ba27e",
+    "storage_bucket": "travel-token-ba27e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535215021903:android:0a76b2b9f0762194962f3a",
+        "android_client_info": {
+          "package_name": "com.traveltoken"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "535215021903-f98j26hhlb33p0dkago3lpnqr6g2fgi4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.traveltoken",
+            "certificate_hash": "f2f63ff398f63d5fe389a51bcda040a3173ecb02"
+          }
+        },
+        {
+          "client_id": "535215021903-0povbest39jir9nmmt6rj6m9295nmd1n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALhzETdAnDyMyntBNy0S8Jxj8XmabzWy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "535215021903-0povbest39jir9nmmt6rj6m9295nmd1n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "535215021903-aegukijtb9pe6eb8q6ci6fv5tsgvekes.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.traveltoken"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.example.traveltoken
+package com.traveltoken
 
 import io.flutter.embedding.android.FlutterActivity
 
